@@ -5,8 +5,7 @@ using namespace std;
 
 int main()
 {
-	// path to our dll
-	LPCSTR DllPath = "C:\\Simple-DLL-Injection\\C++\\testlib\\testlib.dll";
+	LPCSTR DllPath = "C:\\Simple-DLL-Injection\\C++\\testlib\\testlib.dll"; // The Path to our DLL
 	
 	HWND hwnd = FindWindowA(NULL, "Tutorial-x86_64"); // HWND (Windows window) by Window Name
 	DWORD procID; // A 32-bit unsigned integer, DWORDS are mostly used to store Hexadecimal Addresses
@@ -23,8 +22,7 @@ int main()
 	HANDLE hLoadThread = CreateRemoteThread(handle, 0, 0, 
 	(LPTHREAD_START_ROUTINE)GetProcAddress(GetModuleHandleA("Kernel32.dll"), "LoadLibraryA"), pDllPath, 0, 0);
 
-	// Wait for the execution of our loader thread to finish
-	WaitForSingleObject(hLoadThread, INFINITE);
+	WaitForSingleObject(hLoadThread, INFINITE); // Wait for the execution of our loader thread to finish
 
 	cout << "Dll path allocated at: " << hex << pDllPath << endl;
 	cin.get();
