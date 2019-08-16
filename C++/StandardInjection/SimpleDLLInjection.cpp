@@ -15,6 +15,7 @@ int main()
 
 	// HWND (Windows window) by Window Name
 	HWND hwnd = FindWindowA(NULL, "Tutorial-x86_64"); 
+	DWORD procID; // A 32-bit unsigned integer, DWORDS are mostly used to store Hexadecimal Addresses
 	HANDLE hProcess = OpenProcess(PROCESS_ALL_ACCESS, FALSE, 1768);
 
 	// Allocate memory for the dllpath in the target process
