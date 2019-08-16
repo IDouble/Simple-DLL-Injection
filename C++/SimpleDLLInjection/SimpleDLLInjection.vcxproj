@@ -19,7 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{E66753D4-616B-4356-B17E-941F00F37540}</ProjectGuid>
+    <ProjectGuid>{04644C73-58AD-4726-A958-9E3BEDC94C2F}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>StandardInjection</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
