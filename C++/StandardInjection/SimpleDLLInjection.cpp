@@ -3,13 +3,18 @@
 #include <iostream>
 #include <Windows.h>
 
+using namespace std;
+
 int main()
 {
 	// path to our dll
+	TCHAR NPath[MAX_PATH];
+	
+	cout << GetCurrentDirectory(MAX_PATH, NPath) << endl;
 	LPCSTR DllPath = "D:\\projects\\standardinjection\\release\\testlib.dll";
 
 	// Open a handle to target process
-	HANDLE hProcess = OpenProcess(PROCESS_ALL_ACCESS, FALSE, 17344);
+	HANDLE hProcess = OpenProcess(PROCESS_ALL_ACCESS, FALSE, 1768);
 
 	// Allocate memory for the dllpath in the target process
 	// length of the path string + null terminator
@@ -30,8 +35,8 @@ int main()
 	// Wait for the execution of our loader thread to finish
 	WaitForSingleObject(hLoadThread, INFINITE);
 
-	std::cout << "Dll path allocated at: " << std::hex << pDllPath << std::endl;
-	std::cin.get();
+	cout << "Dll path allocated at: " << hex << pDllPath << endl;
+	cin.get();
 
 	// Free the memory allocated for our dll path
 	VirtualFreeEx(hProcess, pDllPath, strlen(DllPath) + 1, MEM_RELEASE);
