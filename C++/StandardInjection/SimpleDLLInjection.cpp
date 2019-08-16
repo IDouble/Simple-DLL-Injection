@@ -1,4 +1,4 @@
-// StandardInjection.cpp : Defines the entry point for the console application.
+// SimpleDLLInjection.cpp : Defines the entry point for the console application.
 
 #include <iostream>
 #include <Windows.h>
