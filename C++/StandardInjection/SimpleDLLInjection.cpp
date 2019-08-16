@@ -8,9 +8,9 @@ using namespace std;
 int main()
 {
 	// path to our dll
-	TCHAR NPath[MAX_PATH];
-	
-	cout << GetCurrentDirectory(MAX_PATH, NPath) << endl;
+	/*TCHAR NPath[MAX_PATH];
+	cout << GetCurrentDirectory(MAX_PATH, NPath) << endl;*/
+
 	LPCSTR DllPath = "D:\\projects\\standardinjection\\release\\testlib.dll";
 
 	// Open a handle to target process
