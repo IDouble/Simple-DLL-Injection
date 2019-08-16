@@ -6,10 +6,7 @@ using namespace std;
 int main()
 {
 	// path to our dll
-	/*TCHAR NPath[MAX_PATH];
-	cout << GetCurrentDirectory(MAX_PATH, NPath) << endl;*/
-
-	LPCSTR DllPath = "D:\\projects\\standardinjection\\release\\testlib.dll";
+	LPCSTR DllPath = "C:\\projects\\SimpleDLLInjection\\release\\testlib.dll";
 	
 	HWND hwnd = FindWindowA(NULL, "Tutorial-x86_64"); // HWND (Windows window) by Window Name
 	DWORD procID; // A 32-bit unsigned integer, DWORDS are mostly used to store Hexadecimal Addresses
