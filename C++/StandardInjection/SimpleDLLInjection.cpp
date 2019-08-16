@@ -12,9 +12,8 @@ int main()
 	cout << GetCurrentDirectory(MAX_PATH, NPath) << endl;*/
 
 	LPCSTR DllPath = "D:\\projects\\standardinjection\\release\\testlib.dll";
-
-	// HWND (Windows window) by Window Name
-	HWND hwnd = FindWindowA(NULL, "Tutorial-x86_64"); 
+	
+	HWND hwnd = FindWindowA(NULL, "Tutorial-x86_64"); // HWND (Windows window) by Window Name
 	DWORD procID; // A 32-bit unsigned integer, DWORDS are mostly used to store Hexadecimal Addresses
 	GetWindowThreadProcessId(hwnd, &procID); // Getting our Process ID, as an ex. like 000027AC
 	HANDLE handle = OpenProcess(PROCESS_ALL_ACCESS, FALSE, procID); // Opening the Process with All Access
