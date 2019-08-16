@@ -13,7 +13,8 @@ int main()
 
 	LPCSTR DllPath = "D:\\projects\\standardinjection\\release\\testlib.dll";
 
-	// Open a handle to target process
+	// HWND (Windows window) by Window Name
+	HWND hwnd = FindWindowA(NULL, "Tutorial-x86_64"); 
 	HANDLE hProcess = OpenProcess(PROCESS_ALL_ACCESS, FALSE, 1768);
 
 	// Allocate memory for the dllpath in the target process
